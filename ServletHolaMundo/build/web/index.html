@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Registro de Usuarios</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container" >
+            
+            <div class="containerRegistro">
+                
+                <form name="formulario" method="post" 
+                  action="Registrar">
+                <label>Nombre:</label>
+                <input type="text" name="nombre" >
+                <br>
+                <label>Apellido Paterno:</label>
+                <input type="text" name="appat" >
+                <br>
+                <label>Apellido Materno:</label>
+                <input type="text" name="appmat" >
+                <br>
+                <label>Edad:</label>
+                <input type="number" name="edad" min="01" max="99" size="2" >
+                <br>
+                <label>Correo:</label>
+                <input type="email" name="correo" >
+                <br>
+                <input type="submit" value="Registro de Usuarios" >
+                <input type="reset" value="Borrar Registro" >
+            </form>
+            </div>
+            <br>
+            <div class="containerConsulta" >
+                <br>
+                <form method="get" name="consultarregistro" action="Consultar">
+                    <input type="submit" value="Consultar Tabla de Usuarios" >
+                </form>
+            </div>
+            <br>
+            <div class="containerEliminar" >
+                <br>
+                <form method="post" name="formularioeliminar" action="Eliminar">
+                    <label>ID del Usuario a Eliminar</label>
+                    <input type="number" name="ideliminar" >
+                    <br>
+                    <input type="submit" value="Eliminar Usuario" >
+                </form>
+                
+            </div>
+            
+            <br>
+            
+            <div class="containerActualizar">
+               <form method="post" name="formularioeliminar" action="Actualizar">
+                    <label>ID del Usuario a Modificar</label>
+                    <input type="number" name="idactualizar" >
+                    <input type="hidden" name="operacion" value="Busqueda">
+                    <input type="submit" value="Actualizar Usuario" >
+                    
+            </div>
+            
+            
+            
+        </div>
+    </body>
+</html>
